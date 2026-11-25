@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Rede Social</title>
+    <link rel="stylesheet" href="redesocial.css">
+</head>
+<body>
+
+    <!-- Tela de entrada -->
+    <section id="telaLogin" class="tela-login">
+        <div class="login-container">
+            <div class="logo">
+                <span class="logo-simbolo">N</span>
+                <h1>NEXUS</h1>
+            </div>
+
+            <p class="subtitulo">Conecte-se ao seu mundo.</p>
+
+            <form id="formLogin">
+                <input type="text" id="loginUsuario" placeholder="Usuário ou e-mail" required>
+                <input type="password" id="loginSenha" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+
+            <p class="alternar-tela">
+                Não possui conta?
+                <a href="#" id="abrirCadastro">Criar conta</a>
+            </p>
+
+            <form id="formCadastro" class="form-cadastro oculto">
+                <h2>Criar conta</h2>
+                <input type="text" id="cadastroNome" placeholder="Nome completo" required>
+                <input type="text" id="cadastroUsername" placeholder="Nome de usuário" required>
+                <input type="email" id="cadastroEmail" placeholder="E-mail" required>
+                <input type="password" id="cadastroSenha" placeholder="Senha" required>
+                <button type="submit">Cadastrar</button>
+                <p class="alternar-tela">
+                    Já possui conta?
+                    <a href="#" id="voltarLogin">Entrar</a>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Aplicação -->
+    <main id="aplicacao" class="aplicacao oculto">
+
+        <!-- Menu lateral -->
+        <aside class="menu-lateral">
+            <div class="logo">
+                <span class="logo-simbolo">N</span>
+                <h1>NEXUS</h1>
+            </div>
+
+            <nav>
+                <a href="#" class="menu-item ativo">
+                    <span>⌂</span> Início
+                </a>
+
+                <a href="#publicacoes" class="menu-item">
+                    <span>◉</span> Explorar
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span>♧</span> Comunidade
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span>⚙</span> Configurações
+                </a>
+            </nav>
+
+            <div class="perfil-menu">
+                <div class="avatar">N</div>
+                <div class="perfil-info">
+                    <strong id="nomeUsuarioMenu">Usuário</strong>
+                    <span id="usernameMenu">@usuario</span>
+                </div>
+                <button id="botaoSair" class="botao-sair" title="Sair">↪</button>
+            </div>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <section class="conteudo">
+
+            <header class="cabecalho">
+                <div>
+                    <h2>Feed</h2>
+                    <p>Acompanhe o que está acontecendo na Nexus.</p>
+                </div>
+                <div class="status">
+                    <span class="status-bolinha"></span>
+                    Online
+                </div>
+            </header>
+
+            <!-- Criar publicação -->
+            <section class="criar-publicacao">
+                <div class="criar-topo">
+                    <div class="avatar avatar-verde">N</div>
+                    <h3>Compartilhe algo...</h3>
+                </div>
+
+                <form id="formPublicacao">
+                    <textarea id="legendaPublicacao" placeholder="O que você está pensando?" required></textarea>
+
+                    <div class="publicacao-opcoes">
+                        <input type="url" id="imagemPublicacao" placeholder="Link da imagem (opcional)">
+
+                        <button type="submit" class="botao-publicar">
+                            Publicar <span>↗</span>
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Publicações -->
+            <section id="publicacoes" class="feed">
+                <div class="feed-titulo">
+                    <h3>Publicações recentes</h3>
+                    <span class="feed-indicador">● ATUALIZADO</span>
+                </div>
+
+                <div id="listaPublicacoes">
+                    <!-- Publicações inseridas pelo JavaScript -->
+                </div>
+            </section>
+
+        </section>
+
+        <!-- Painel direito -->
+        <aside class="painel-direito">
+            <div class="painel-card">
+                <h3>Sobre a Nexus</h3>
+                <p>
+                    Um espaço para compartilhar ideias, momentos e se conectar
+                    com pessoas.
+                </p>
+            </div>
+
+            <div class="painel-card">
+                <h3>Comunidade</h3>
+                <div class="comunidade-item">
+                    <span class="comunidade-icone">✦</span>
+                    <div>
+                        <strong>Compartilhe</strong>
+                        <p>Suas ideias merecem espaço.</p>
+                    </div>
+                </div>
+
+                <div class="comunidade-item">
+                    <span class="comunidade-icone">◈</span>
+                    <div>
+                        <strong>Conecte-se</strong>
+                        <p>Conheça novas pessoas.</p>
+                    </div>
+                </div>
+
+                <div class="comunidade-item">
+                    <span class="comunidade-icone">⌁</span>
+                    <div>
+                        <strong>Interaja</strong>
+                        <p>Curta e participe.</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="rodape">
+                <span>NEXUS © 2026</span>
+                <p>Conectando ideias.</p>
+            </footer>
+        </aside>
+
+    </main>
+
+    <script src="redesocial.js"></script>
+</body>
+</html>
